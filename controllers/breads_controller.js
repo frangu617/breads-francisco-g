@@ -6,7 +6,8 @@ const Bread = require('../models/bread.js')
 breads.get('/', (req, res) => {
     res.render('Index',  //keep this in mind in case of errors, the code along has it lowercase, and uppercase
         {
-            breads: Bread
+            breads: Bread,
+            title: 'Index Page'
         })
     //res.send(Bread)
 })
