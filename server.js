@@ -14,7 +14,7 @@ app.engine('.jsx', require('express-react-views').createEngine())
 
 //ROUTES
 app.get('/', (req, res) => {
-    res.send('Welcome to an Awesome App about Bread!')
+    res.send(`<h1>Welcome to an Awesome App about <a href = '/breads'>Bread!</a></h1>`)
 })
 
 //BREADS

@@ -7,7 +7,7 @@ breads.get('/', (req, res) => {
     res.render('Index',  //keep this in mind in case of errors, the code along has it lowercase, and uppercase
         {
             breads: Bread,
-            title: 'Index Page'
+            title: 'Pan town!'
         })
     //res.send(Bread)
 })
