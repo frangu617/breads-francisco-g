@@ -32,7 +32,7 @@ mongoose.connect(process.env.MONGO_URI)
   
 //ROUTES
 app.get('/', (req, res) => {
-    res.send(`<h1>Welcome to an Awesome App about <a href = '/breads'>Bread!</a></h1>`)
+    res.render(`home`)
 })
 
 
@@ -40,6 +40,10 @@ app.get('/', (req, res) => {
 //BREADS
 const breadsController = require('./controllers/breads_controller.js')
 app.use('/breads', breadsController)
+
+//BAKERS
+const bakersController = require('./controllers/bakers_controller.js')
+app.use('/bakers', bakersController)
 
 app.get('*', (req, res) =>{
     res.send(`https://http.cat/404`)
