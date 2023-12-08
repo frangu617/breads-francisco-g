@@ -19,6 +19,13 @@ breadSchema.methods.getBakedBy = function () {
 breadSchema.statics.findByBaker = function (baker) {
     return this.find({ baker: baker })
 }
+
+breadSchema.post('findOneAndDelete', async (doc) => {
+    if (doc) {
+        await Bread.deleteMany({ baker: doc._id })
+    }
+    
+})
 // model and export 
 const Bread = mongoose.model('Bread', breadSchema)
 module.exports = Bread

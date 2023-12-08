@@ -13,7 +13,7 @@ function Show({ baker }) {
         About {baker.name}: {baker.bio}
       </p>
       <h3>Breads {baker.name} has baked</h3>
-      <ul>
+      <ul style = {{backgroundColor: "white", border: "1px solid black", borderRadius: "5px", padding: "10px", width: "50%"}}>
         {baker.breads.map((bread) => {
           return (
             <li key={bread._id}>
